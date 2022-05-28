@@ -1,7 +1,8 @@
 const { Builder, Browser, By, until } = require("selenium-webdriver");
 const { writeFileSync } = require("fs");
 const [_, __, url] = process.argv;
-(async function example() {
+
+(async function index() {
   let driver = await new Builder().forBrowser(Browser.CHROME).build();
   try {
     await driver.get(url);
